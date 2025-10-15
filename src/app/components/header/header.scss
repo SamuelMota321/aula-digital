@@ -1,0 +1,81 @@
+@import '../../../styles';
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: $background-color;
+  padding: .8rem 2rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+
+
+  .logo {
+    color: $font-color-black;
+    font-size: 1.5rem;
+    cursor: pointer;
+    .highlight {
+      color: $secondary-color;
+    }
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+    a {
+      color: $font-color-black;
+      padding: $button-padding;
+
+      &:hover {
+        background-color: darken($background-color, 10%);
+      }
+    }
+
+    .dropdown {
+      position: relative;
+
+      .dropdown-button {
+        display: flex;
+        gap: 1px;
+        align-items: center;
+        justify-content: center;
+        background-color: $secondary-color;
+        border: none;
+        color: $font-color-white;
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border-radius: 10px;
+
+        &:hover {
+          background-color: darken($secondary-color, 10%);
+        }
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: $secondary-color;
+        min-width: 120px;
+        z-index: 1;
+        border-radius: 10px;
+
+        a {
+          display: block;
+          padding: $button-padding;
+          color: $font-color-black;
+
+          &:hover {
+            background-color: darken($secondary-color, 5%);
+            border-radius: 10px;
+          }
+        }
+      }
+
+      &:hover .dropdown-content {
+        display: block;
+
+      }
+    }
+  }
+}
