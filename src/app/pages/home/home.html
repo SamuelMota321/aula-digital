@@ -1,1 +1,14 @@
-<p>home works!</p>
+<main>
+  <section class="container">
+    <h1>Seja bem-vindo(a)!</h1>
+    <p>O que você gostaria de aprender hoje?</p>
+
+    @for(card of tutorialCards; track card.index) {
+      <app-card>
+        <h2>{{ card.title }}</h2>
+        <p>{{ card.description }}</p>
+      </app-card>
+    }
+  
+  </section>
+</main>
