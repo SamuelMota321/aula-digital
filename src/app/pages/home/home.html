@@ -1,14 +1,18 @@
 <main>
   <section class="container">
-    <h1>Seja bem-vindo(a)!</h1>
-    <p>O que você gostaria de aprender hoje?</p>
+    <div class="page-title">
+      <h1>Seja bem-vindo(a)!</h1>
+      <p>O que você gostaria de aprender hoje?</p>
+    </div>
 
-    @for(card of tutorialCards; track card.index) {
+    <div class="tutorial-cards-grid">
+      @for(card of tutorialCards; track card.index) {
       <app-card>
         <h2>{{ card.title }}</h2>
         <p>{{ card.description }}</p>
+        <button (click)="verMais(card.index)">Ver o conteúdo > </button>
       </app-card>
-    }
-  
+      }
+    </div>
   </section>
 </main>

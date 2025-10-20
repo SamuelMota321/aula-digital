@@ -1,0 +1,13 @@
+@import '../../../styles.scss';
+
+.card {
+  background-color: $primary-color;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  color: $font-color-white;
+  min-height: 150px;
+}
